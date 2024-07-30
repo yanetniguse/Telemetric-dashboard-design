@@ -1,0 +1,51 @@
+/* styles.css */
+.ai-cameras-section {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ai-cameras-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.camera-item {
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.camera-item i {
+    font-size: 2rem;
+    color: #333;
+}
+
+.camera-feed {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.camera-feed img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.online {
+    color: #4caf50; /* Green for online */
+}
+
+.status.offline {
+    color: #f44336; /* Red for offline */
+}
