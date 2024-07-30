@@ -8,7 +8,7 @@ body, html {
 .map-satellite-section {
     position: relative;
     height: 220px; /* Adjust as needed */
-    width: 600px;
+    width: 900px;
 }
 
 .map-controls {
