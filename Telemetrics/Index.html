@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telematics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="MStyles.css">
+    <link rel="stylesheet" href="Astyles.css">>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+</head>
+<body>
+    
+    <header class="hero-section">
+        
+        <div class="hero-content">
+            
+            <h1 class="hero-heading">Empowering Your Vehicle's Data Insights</h1>
+            <p class="hero-subheading">Unlock the full potential of your telematics data with our advanced dashboard solutions.</p>
+            
+            <section class="ai-cameras-section">
+                <h2>AI Cameras</h2>
+                <div class="camera-item">
+                    <i class="fas fa-video"></i>
+                    <div class="camera-feed">
+                        <!-- Placeholder for camera feed -->
+                        <img src="https://i.pinimg.com/564x/b4/5d/0f/b45d0fd7d6f4867d51cd5ac3bc76f7c1.jpg" alt="Camera Feed 1">
+                    </div>
+                    <p>Camera 1: Front View</p>
+                    <p>Status: <span class="status online">Online</span></p>
+                </div>
+                <!-- Add more camera items as needed -->
+            </section>
+        </div>
+    </header>
+    
+    <div class="container">
+       
+
+        <section class="map-satellite-section">
+            <div class="map-controls">
+                <button id="map-view" class="view-button active">World Map</button>
+                <button id="satellite-view" class="view-button">Satellite View</button>
+            </div>
+            <div id="map-container" class="map-container">
+                <div id="map" class="map-view"></div>
+                <div id="satellite" class="map-view satellite hidden"></div>
+            </div>
+        </section>
+        
+        <h1 class="fancy-heading">Telematics Dashboard</h1>
+        <section class="dashboard-section">
+            <div class="data-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <div class="pie-chart" data-value="75" data-range="200" data-label="mph"></div>
+                <p>Speed</p>
+            </div>
+            <div class="data-item">
+                <i class="fas fa-cogs"></i>
+                <div class="pie-chart" data-value="3085" data-range="8000" data-label="RPM"></div>
+                <p>RPM</p>
+            </div>
+            <div class="data-item">
+                <i class="fas fa-thermometer-half"></i>
+                <div class="pie-chart" data-value="28" data-range="120" data-label="°C"></div>
+                <p>Coolant Temp</p>
+            </div>
+            <div class="data-item">
+                <i class="fas fa-arrow-up"></i>
+                <div class="pie-chart" data-value="31" data-range="100" data-label="%"></div>
+                <p>Throttle Pos</p>
+            </div>
+            <div class="data-item">
+                <i class="fas fa-car-battery"></i>
+                <div class="pie-chart" data-value="94" data-range="100" data-label="%"></div>
+                <p>Engine Load</p>
+            </div>
+            <div class="data-item">
+                <i class="fas fa-gas-pump"></i>
+                <div class="pie-chart" data-value="23" data-range="100" data-label="%"></div>
+                <p>Fuel Level</p>
+            </div>
+        </section>>
+
+        
+           
+        </div>
+
+  
+        
+    
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="MScripts.js"></script>
+    <script src="AScripts.js"></script>
+</body>
+</html>
