@@ -61,11 +61,16 @@ body {
 }
 
 .container {
+    max-width: 100%;
+    overflow-x: hidden; /* Hide horizontal overflow */
     display: flex;
     flex-direction: column;
    align-items: center;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 
 .fancy-heading {
@@ -74,12 +79,38 @@ body {
     color: #ff5733; /* Solid color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+     margin: 2rem auto 1rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    max-width: 100%; /* Ensure it fits within container */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
     border-radius: 10px;
 }
 
+
+
+.heading-container {
+    width: 100%;
+    overflow: hidden; /* Hide any overflow */
+    padding: 0 1rem; /* Add padding */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fancy-heading {
+        font-size: 2rem; /* Adjust font size */
+        padding: 0 0.5rem; /* Adjust padding */
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fancy-heading {
+        font-size: 1.5rem; /* Further adjust font size */
+        padding: 0 0.5rem; /* Adjust padding */
+    }
+}
 
 
 
@@ -243,14 +274,34 @@ p {
         font-size: 0.875rem;
     }
 
-    .data-item {
-        width: 150px;
-    }
-
-    .pie-chart {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 
+
+
+
+
+
+@media (max-width: 768px) {
+    .data-item {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Limit width */
+    }
+
+    .pie-chart {
+        width: 60px; /* Adjust for better fit */
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-item {
+        width: 100%; /* Full width for very small screens */
+        max-width: 200px; /* Limit width further */
+    }
+
+    .pie-chart {
+        width: 50px; /* Further adjust for very small screens */
+        height: 50px;
+    }
+}
