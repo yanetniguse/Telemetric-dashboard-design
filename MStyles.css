@@ -1,10 +1,4 @@
-/* styles.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* MStyles.css */
 .map-satellite-section {
     position: relative;
     height: 220px; /* Adjust as needed */
@@ -44,20 +38,7 @@ body, html {
     background-color: #0056b3;
 }
 
-.map-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.map-view {
-    width: 100%;
-    height: 100%;
-}
-
 .satellite {
-    width: 200px; /* Adjust size */
-    height: 150px; /* Adjust size */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -70,4 +51,30 @@ body, html {
 
 .hidden {
     display: none;
+}
+
+/* Default styles for the map container */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure Leaflet map is responsive */
+#map, #satellite {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide map on small screens */
+@media (max-width: 768px) {
+    .map-satellite-section {
+        display: none !important; /* Hide map on screens smaller than 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-satellite-section {
+        display: none !important; /* Hide map on screens smaller than 480px */
+    }
 }
