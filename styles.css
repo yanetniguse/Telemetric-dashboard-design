@@ -1,80 +1,322 @@
-/* MStyles.css */
-.map-satellite-section {
-    position: relative;
-    height: 220px; /* Adjust as needed */
-    width: 900px;
-}
-
-.map-controls {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    padding-top: 0;
     display: flex;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    padding: 5px;
-    z-index: 10;
+    
 }
 
-.view-button {
-    padding: 10px 20px;
-    font-size: 14px;
+.f-heading {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-align: center;
+     margin: 2rem auto 1rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    max-width: 100%; /* Ensure it fits within container */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+
+.hero-section {
+    background-image: url('https://i.pinimg.com/564x/24/f2/af/24f2afbf269eb9e1b1484eb073f5d773.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 600px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.hero-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    word-wrap: break-word; /* Prevent text from overflowing */
+}
+
+.hero-subheading {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: gold;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
     color: #fff;
     background-color: #007bff;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 5px;
 }
 
-.view-button.active {
+.cta-button:hover {
     background-color: #0056b3;
 }
 
-.view-button:hover {
-    background-color: #0056b3;
+.container {
+    max-width: 100%;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    display: flex;
+    flex-direction: column;
+   align-items: center;
 }
 
-.satellite {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.fancy-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    color: #ff5733; /* Solid color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+     margin: 2rem auto 1rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    max-width: 100%; /* Ensure it fits within container */
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 5;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    border-radius: 10px;
+}
+
+
+
+.heading-container , .f-heading  {
+    width: 100%;
+    overflow: hidden; /* Hide any overflow */
+    padding: 0 1rem; /* Add padding */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .fancy-heading , .f-heading  {
+        font-size: 2rem; /* Adjust font size */
+        padding: 0 0.5rem; /* Adjust padding */
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fancy-heading , .f-heading  {
+        font-size: 1.5rem; /* Further adjust font size */
+        padding: 0 0.5rem; /* Adjust padding */
+    }
+}
+
+
+
+.toggle-buttons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.view-container {
+    height: 400px; /* Adjust height as needed */
+    width: 100%;
+    margin-top: 20px; /* Added margin to ensure it's not cut off */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .hidden {
     display: none;
 }
 
-/* Default styles for the map container */
-.map-container {
+
+
+
+
+.dashboard-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.data-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 180px;
+}
+
+.data-item i {
+    font-size: 2rem;
+    color: #333;
+}
+.pie-chart {
+    width: 100px;
+    height: 100px;
     position: relative;
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color) 0% var(--percentage),
+        #ffffff var(--percentage) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    overflow: hidden;
+    animation: fillPieChart 5s ease-in-out infinite;
 }
 
-/* Ensure Leaflet map is responsive */
-#map, #satellite {
-    width: 100%;
-    height: 100%;
+.pie-chart::before {
+    content: attr(data-value) '%'; /* Display the number as a percentage */
+    position: absolute;
+    font-size: 1.5rem; /* Ensure the font size is large enough */
+    color: #000; /* Text color */
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; /* Make sure the text is above the pie chart */
 }
 
-/* Hide map on small screens */
+@keyframes fillPieChart {
+    0% {
+        background: conic-gradient(
+            #ffffff 0% 0%,
+            #ffffff 0% 0%
+        );
+    }
+    100% {
+        background: conic-gradient(
+            var(--color) 0% var(--percentage),
+            #ffffff var(--percentage) 100%
+        );
+    }
+}
+
+
+.pie-chart::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .map-satellite-section {
-        display: none !important; /* Hide map on screens smaller than 768px */
+
+    .hero-subheading {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .map-heading-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-heading-container h1 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .toggle-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle-button {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .view-container {
+        height: 300px; /* Adjusted height for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .map-satellite-section {
-        display: none !important; /* Hide map on screens smaller than 480px */
+    .hero-heading {
+        font-size: 1.5rem; /* Further adjusted font size */
+    }
+
+    .hero-subheading {
+        font-size: 0.875rem; /* Further adjusted font size */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .data-item {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Limit width */
+    }
+
+    .pie-chart {
+        width: 60px; /* Adjust for better fit */
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-item {
+        width: 100%; /* Full width for very small screens */
+        max-width: 200px; /* Limit width further */
+    }
+
+    .pie-chart {
+        width: 50px; /* Further adjust for very small screens */
+        height: 50px;
     }
 }
